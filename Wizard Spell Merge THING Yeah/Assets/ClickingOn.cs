@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class ClickingOn : MonoBehaviour
 {
-    public GameObject grid, highlight;
+    public GameObject grid, highlight, caster;
     public bool clicked;
 
-    // Update is called once per frame
     void Start()
     {
         clicked = false;
@@ -16,14 +15,10 @@ public class ClickingOn : MonoBehaviour
     {
         if (!clicked)
         {
-            highlight.SetActive(true);
-            grid.SetActive(true);
             clicked = true;
         }
         else
         {
-            highlight.SetActive(false);
-            grid.SetActive(false);
             clicked = false;
         }
     }

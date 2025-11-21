@@ -2891,6 +2891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1012346569}
   highlight: {fileID: 1919109741}
+  caster: {fileID: 0}
   clicked: 0
 --- !u!61 &752550564
 BoxCollider2D:
@@ -3034,9 +3035,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 804352697}
-  - component: {fileID: 804352700}
-  - component: {fileID: 804352699}
-  - component: {fileID: 804352698}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -3084,75 +3082,6 @@ Transform:
   - {fileID: 1328376812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &804352698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804352696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d407b378529214445b13824f9e5de82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCasting: 0
-  x: 0
-  a: {fileID: 1328376811}
-  b: {fileID: 2108981544}
-  c: {fileID: 928647484}
-  d: {fileID: 426432877}
-  e: {fileID: 1269150491}
-  f: {fileID: 1762113260}
-  g: {fileID: 1851559386}
-  h: {fileID: 1838978043}
-  i: {fileID: 1879275720}
---- !u!114 &804352699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804352696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d407b378529214445b13824f9e5de82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCasting: 0
-  x: 0
-  a: {fileID: 928647484}
-  b: {fileID: 2000581644}
-  c: {fileID: 1838978043}
-  d: {fileID: 426432877}
-  e: {fileID: 1879275720}
-  f: {fileID: 1297622453}
-  g: {fileID: 853184066}
-  h: {fileID: 1655136191}
-  i: {fileID: 1269150491}
---- !u!114 &804352700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804352696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d407b378529214445b13824f9e5de82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCasting: 0
-  x: 0
-  a: {fileID: 928647484}
-  b: {fileID: 789447392}
-  c: {fileID: 2071475350}
-  d: {fileID: 2000581644}
-  e: {fileID: 426432877}
-  f: {fileID: 1838978043}
-  g: {fileID: 2108981544}
-  h: {fileID: 1851559386}
-  i: {fileID: 1154643359}
 --- !u!1 &817166392
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,6 +3284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1302252999}
   highlight: {fileID: 2079599206}
+  caster: {fileID: 0}
   clicked: 0
 --- !u!61 &826694634
 BoxCollider2D:
@@ -5177,6 +5107,63 @@ Transform:
   - {fileID: 2040848377}
   - {fileID: 162039729}
   m_Father: {fileID: 826694632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1326274453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326274455}
+  - component: {fileID: 1326274454}
+  m_Layer: 0
+  m_Name: CastController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1326274454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326274453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cfd452f65f95a4091a7b9c79b30e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 1012346569}
+  water: {fileID: 1302252999}
+  elec: {fileID: 908039819}
+  fh: {fileID: 1919109741}
+  wh: {fileID: 2079599206}
+  eh: {fileID: 666225762}
+  fireSpell: {fileID: 752550563}
+  waterSpell: {fileID: 826694633}
+  elecSpell: {fileID: 1782188612}
+  f: 0
+  w: 0
+  e: 0
+  maxxed: 0
+--- !u!4 &1326274455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326274453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.32207757, y: 0.47665274, z: 0.051964562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328376811
 GameObject:
@@ -7294,6 +7281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 908039819}
   highlight: {fileID: 666225762}
+  caster: {fileID: 0}
   clicked: 0
 --- !u!61 &1782188613
 BoxCollider2D:
@@ -8951,3 +8939,4 @@ SceneRoots:
   - {fileID: 752550562}
   - {fileID: 826694632}
   - {fileID: 1782188611}
+  - {fileID: 1326274455}
